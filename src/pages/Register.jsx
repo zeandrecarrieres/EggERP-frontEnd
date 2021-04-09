@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+
+function Register() {
+  const [type, setType] = useState("");
+  const [register_number, setRegister_number] = useState("");
+  const [name, setName] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [contact, setContact] = useState("");
+
+  const submit = async (e) => {
+    e.preventDefault();
+    await fetch("http://localhost:3001/client", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type,
+        register_number,
+        name,
+        telephone,
+        mobile,
+        email,
+        website,
+        contact,
+      }),
+    });
+  };
+  return (
+    <div>
+      <form onSubmit={submit}>
+        <select onChange={(e) => setType(e.target.value)}>
+          <option value="business">Bussiness</option>
+          <option value="personal">Personal</option>
+        </select>
+        <input
+          type="text"
+          placeholder="register_number"
+          onChange={(e) => setRegister_number(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="name"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="telephone"
+          onChange={(e) => setTelephone(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="mobile"
+          onChange={(e) => setMobile(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="website"
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="contact"
+          onChange={(e) => setContact(e.target.value)}
+        />
+        <button type="submit">Create Client</button>
+      </form>
+    </div>
+  );
+}
+
+export default Register;

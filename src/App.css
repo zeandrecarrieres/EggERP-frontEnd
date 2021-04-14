@@ -1,6 +1,13 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
-}
+  display: flex;
+  font-size: .8rem;
+} 
 
 form {
   display: flex;
@@ -9,24 +16,146 @@ form {
   justify-content: center;
 }
 
+.transaction-form {
+  display: flex;
+  flex-direction: row
+}
+
 input, select, button {
   padding: .5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 3px;
-  border-radius: 6px;
+  border-radius: 1rem;
   border: 0;
-  background: #f6f6f6
+  background: #ffffff;
+  color: #959595;
+  margin:0.5rem;
 }
+
+
+input::-webkit-input-placeholder {/* Chrome/Opera/Safari/Edge */
+  color: #959595;
+}
+
+.little-field {
+  max-width: 5rem;
+}
+
+.select-field{
+  width: 20rem;
+}
+
 
 button {
   padding: .5rem 1rem;
   font-size: 1rem;
   margin: 3px;
-  border-radius: 6px;
+  border-radius: 1rem;
   border: 0;
   background: #f59709;
   color: white;
 }
 
+.del-btn {
+  padding: .3rem .7rem;
+  font-size: 0.8rem;
+  background: #f52509;
+  
+}
+
+h1 {
+  color: #808080 ;
+}
 
 
+
+.add-transactions {
+  height: 91vh;
+  background: #F5F5F5;
+  margin-top: 3rem ;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+/* +++++++++++ CSS HOME ++++++++++++ */
+
+.home {
+  height: 91vh;
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  margin-top: 3rem ;
+  flex-direction:column;
+  align-items:center;
+  background: #F5F5F5;
+}
+
+/* +++++++++++ CSS LIST PRODUCTS ++++++++++++ */
+
+.list-products {
+  height: 91vh;
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  margin-top: 3rem ;
+  flex-direction:column;
+  align-items:center;
+  background: #F5F5F5;
+}
+
+/* +++++++++++ CSS ADD CLIENT ++++++++++++ */
+
+.add-client {
+  height: 91vh;
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  margin-top: 3rem ;
+  flex-direction:column;
+  align-items:center;
+  background: #F5F5F5;
+}
+
+/* +++++++++++ CSS LIST PRODUCTS ++++++++++++ */
+
+.list-clients {
+  height: 91vh;
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  margin-top: 3rem ;
+  flex-direction:column;
+  align-items:center;
+  background: #F5F5F5;
+}
+
+
+/* +++++++++++ CSS ADD PRODUCT ++++++++++++ */
+
+.add-product{
+  height: 91vh;
+  display: flex;
+  flex: 1;
+  justify-content:center;
+  margin-top: 3rem ;
+  flex-direction:column;
+  align-items:center;
+  background: #F5F5F5;
+}
+
+
+.transaction-item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.champ {
+  background: white;
+  width: 10rem;
+  margin: 2px;
+  padding: .5rem 1rem;
+
+}

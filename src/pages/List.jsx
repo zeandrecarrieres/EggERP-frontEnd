@@ -7,25 +7,28 @@ function List() {
     const [clients, setClients] = useState([]);
 
     useEffect(()=>{
-        const list = fetch('http://localhost:3001/client/')
+        fetch('http://localhost:3001/client/')
             .then(response => response.json())
             .then(data=> setClients(data))
     },[])
 
-    console.log(clients)
-
-    // clients.map((item)=>{
-    //     <p>{item.email}</p>
-    // })
+    
+   
 
     return (
-        <div>
+        <div className="list-clients">
             <h1>Clients List</h1> 
             <ul className="list-container">
-                <li><a href="">Nome do Cliente</a> | <span>Contato</span></li>
-                <li><a href="">Nome do Cliente</a> | <span>Contato</span></li>
-                <li><a href="">Nome do Cliente</a> | <span>Contato</span></li>
-                <li><a href="">Nome do Cliente</a> | <span>Contato</span></li>
+                {clients.map((item)=>(
+                        <li key={item._id}>
+                            <input type="text" value= {item.name} readOnly/>    
+                            <input type="text" value= {item.contact} readOnly/> 
+                            <input type="text" value= {item.telephone} readOnly/> 
+                            <button className="del-btn" onClick={()=>{alert("You wanto to delete "+ item.name+" ?")}}>delete</button>
+                        </li>
+                ))}
+               
+               
             </ul>
         </div>
     )

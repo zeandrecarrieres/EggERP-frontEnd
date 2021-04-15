@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Register() {
+function EditProduct() {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -15,7 +15,7 @@ function Register() {
   const submit = async (e) => {
     e.preventDefault()
     await fetch("http://localhost:3001/product", {
-      method: "POST",
+      method: "GET",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         id,
@@ -32,7 +32,7 @@ function Register() {
   };
   return (
     <div className="add-product">
-      <h1>Add new product</h1>
+      <h1>Edit product</h1>
       <div className="form-group">
         <form onSubmit={submit}>
           <div className="form-line">
@@ -105,4 +105,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default EditProduct;

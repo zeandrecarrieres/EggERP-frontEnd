@@ -12,7 +12,19 @@ function ListProduct() {
             .then(data=> setProducts(data))
     },[])
 
+const deleteProduct = async (e) => {
+    await fetch("http://localhost:3001/product/"+e, {
+        method: "DELETE",
 
+    })
+}
+
+const editProduct = async (e) => {
+    await fetch("http://localhost:3001/product/"+e, {
+        method: "DELETE",
+
+    })
+}
   
 //    console.log(products)
 
@@ -26,7 +38,8 @@ function ListProduct() {
                         <input type="text" value= {product.description} readOnly/> 
                         <input type="text" value= {product.unit} readOnly/> 
                         <input type="text" value= {product.name}  readOnly/>  
-                        <button className="del-btn" onClick={()=>{alert("You wanto to delete "+ product.name+" ?")}}>delete</button>     
+                        <button className="del-btn" value={product._id} onClick={(e) =>deleteProduct(e.target.value)}>delete</button>   
+                        <button className="edit-btn" value={product._id} onClick={(e) =>editProduct(e.target.value)}>edit</button>   
 
                     </li>
                        

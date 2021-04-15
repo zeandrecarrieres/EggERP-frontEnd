@@ -63,6 +63,13 @@ button {
   
 }
 
+.edit-btn {
+  padding: .3rem .7rem;
+  font-size: 0.8rem;
+  background: #ffda09;
+  
+}
+
 h1 {
   color: #808080 ;
 }

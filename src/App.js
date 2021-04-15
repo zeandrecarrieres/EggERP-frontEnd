@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import ListProduct from "./pages/ListProduct";
+import EditProduct from "./pages/EditProduct";
 import RegisterProduct from "./pages/RegisterProduct";
 import AddTransaction from "./pages/AddTransaction";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/list" component={List} />
           <Route path="/prod_register" component={RegisterProduct} />
+          <Route path="/prod_edit" component={EditProduct} />
           <Route path="/prod_list" component={ListProduct} />
           <Register />
         </Switch>

@@ -15,6 +15,7 @@ function Navbar() {
                 <li><Link to="/list" className="menu-item">List Clients</Link></li>
                 <li><Link to="/prod_register" className="menu-item">Add Product</Link></li>
                 <li><Link to="/prod_list" className="menu-item">List Products</Link></li>
+                <li><Link to="/user_register" className="menu-item">Add User</Link></li>
             </ul>
             <button className="sign-out">SIGN-OUT</button>
              </div>

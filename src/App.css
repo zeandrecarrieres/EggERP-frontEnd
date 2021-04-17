@@ -3,11 +3,19 @@
   text-decoration: none;
 }
 
+* :focus {
+  outline: 0;
+}
+
 .App {
   text-align: center;
   display: flex;
   font-size: .8rem;
 } 
+
+button {
+  cursor: pointer;
+}
 
 form {
   display: flex;

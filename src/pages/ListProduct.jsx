@@ -8,18 +8,20 @@ import { FaRegTrashAlt } from "react-icons/fa";
 function ListProduct() {
     const [products, setProducts] = useState([]);
     const [id, setId] = useState("");
+    const [count, setCount] = useState(0);
 
     useEffect(()=>{
         fetch('http://localhost:3001/product/')
             .then(response => response.json())
             .then(data=> setProducts(data))
-    },)
+    },[count])
 
 const deleteProduct = async (e) => {
     await fetch("http://localhost:3001/product/"+e, {
         method: "DELETE",
 
     })
+    setCount(count+1);
 }
 
 const editProduct =  (e) => {
@@ -45,7 +47,8 @@ const editProduct =  (e) => {
                         <input type="text" value= {product.unit} readOnly/> 
                         <input type="text" value= {product.name}  readOnly/>  
                         <button className="del-btn" value={product._id} onClick={(e) =>deleteProduct(e.target.value)}><FaRegTrashAlt />delete</button>   
-                        <button className="edit-btn" value={product._id} onClick={(e) =>editProduct(e.target.value)}> Home</button> 
+                        {/* <button className="edit-btn" value={product._id} onClick={(e) =>editProduct(e.target.value)}> Edit</button>  */}
+                        <Link to={`/prod_edit/${product._id}`} className="edit-btn">Edit</Link>
                           
 
                     </li>

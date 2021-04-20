@@ -36,13 +36,13 @@ const Login = () => {
 
     if (content._id) {
       setUser(content);
+      setRedirect(true);
     }
 
-    setRedirect(true);
   };
 
   if (user) {
-    return <Redirect to="/user_register" />;
+    return <Redirect to="/transaction" />;
   }
   if (redirect) {
     return <Redirect to="/transaction" />;
@@ -79,6 +79,7 @@ const Login = () => {
       </form>
     </div>
     </div>
+    {/* // Si vous n'avez pas de compte inscrivez-vous <Link to='/user_register'> */}
     </div>
   );
 };

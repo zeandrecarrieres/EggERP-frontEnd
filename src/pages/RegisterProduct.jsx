@@ -49,6 +49,7 @@ function Register() {
             />
 
             <select className="select-field" onChange={(e) => setCategory(e.target.value)}>
+              <option value="">-- Select option --</option>
               <option value="Sport">Sport</option>
               <option value="Hobby">Hobby</option>
             </select>

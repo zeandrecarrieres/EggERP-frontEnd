@@ -50,7 +50,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/list" component={List} />
             <Route path="/prod_register" component={RegisterProduct} />
-            <Route path="/prod_edit" component={EditProduct} />
+            <Route path="/prod_edit/:id" component={EditProduct} />
             <Route path="/prod_list" component={ListProduct} />
             <Route path="/user_register" component={RegisterUser} />
             

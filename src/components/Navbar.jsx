@@ -47,10 +47,19 @@ function Navbar() {
                 <h3>PRODUCT</h3>
                 <li><Link to="/prod_register" className="menu-item"><img src={ProductsIcon} alt=""/>Add Product</Link></li>
                 <li><Link to="/prod_list" className="menu-item"><img src={ProductsIcon} alt=""/>List Products</Link></li>
+                {/* { !user ? 
+                <>
+                <h3>USER</h3>
+                <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li>
+                </>
+                :
+                <>
+                </>
+                } */}
                 <h3>USER</h3>
                 <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li>
             </ul>
-            <button onClick={logout} className="sign-out">SIGN-OUT</button>
+            { user ? <button onClick={logout} className="sign-out">SIGN-OUT</button> : ''}
              </div>
            
         </div>

@@ -6,12 +6,13 @@ import { FaRegTrashAlt } from "react-icons/fa";
 
 function List() {
     const [clients, setClients] = useState([]);
+    const [count, setCount] = useState(0);
 
     useEffect(()=>{
         fetch('http://localhost:3001/client/')
             .then(response => response.json())
             .then(data=> setClients(data))
-    })
+    },[count])
 
     const deleteClient = async (e) => {
         
@@ -19,6 +20,7 @@ function List() {
             method: "DELETE",
     
         })
+        setCount(count+1);
         console.log(e)
     }
    

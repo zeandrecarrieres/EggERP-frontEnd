@@ -64,10 +64,16 @@ button {
   color: white;
 }
 
+button:hover {
+  background: #ff5e00;
+ 
+}
+
 .del-btn {
   padding: .3rem .7rem;
   font-size: 0.8rem;
   background: #f52509;
+  
   
 }
 
@@ -80,19 +86,11 @@ button {
 
 h1 {
   color: #808080 ;
+  justify-content: flex-start;
+  font-weight: 300;
 }
 
 
-
-.add-transactions {
-  height: 91vh;
-  background: #F5F5F5;
-  margin-top: 3rem ;
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items: center;
-}
 
 /* +++++++++++ CSS HOME ++++++++++++ */
 
@@ -173,4 +171,36 @@ h1 {
   margin: 2px;
   padding: .5rem 1rem;
 
+}
+
+hr {
+  border: 1px solid rgba(177, 177, 177, 0.226);
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 600px){
+	.App {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    font-size: .8rem;
+  } 
+
+  .side-menu {
+    display: flex;
+    width: 100%;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .menu-container {
+    width: 100%;
+    width: 100vw;
+  }
+
+  .side-menu ul  {
+    display: flex;
+    width: 100%;
+  
+}
 }

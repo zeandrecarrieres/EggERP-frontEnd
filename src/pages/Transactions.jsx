@@ -21,7 +21,9 @@ function Transactions({addCount}) {
   },[addCount]);
 
   return (
+
     <div>
+      <div className="transactions-list">
       {transactions.map((transaction)=>
         (
           <Transaction key={transaction._id} transaction={transaction} />
@@ -30,10 +32,12 @@ function Transactions({addCount}) {
           )}
           <div className="total-indicateur">
             <h2>Total</h2>
-            {console.log(totalInd)}
+            {/* {console.log(totalInd)} */}
             <p>{totalInd}</p>
             {/* <p> {transactions.reduce((transaction, acc)=>transaction.price_total + transaction.price_total,0)}</p> */}
           </div>
+      </div>
+     
     </div>
   );
 }

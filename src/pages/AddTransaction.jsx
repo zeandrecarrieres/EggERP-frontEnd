@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Transactions from "./Transactions";
+import './addTransactions.css'
 
 function AddTransaction() {
   const [date, SetDate] = useState("");
@@ -67,7 +68,7 @@ function AddTransaction() {
 
         <input
           type="text"
-          placeholder="quantity"
+          placeholder="uantity"
           onChange={(e) => {
             SetQuantity(e.target.value);
             SetPrice_total(e.target.value * price);
@@ -75,7 +76,7 @@ function AddTransaction() {
         />
         <input
           type="text"
-          placeholder="price_un"
+          placeholder="Price unitary"
           onChange={(e) => {
             SetPrice(e.target.value);
             SetPrice_total(quantity * e.target.value);

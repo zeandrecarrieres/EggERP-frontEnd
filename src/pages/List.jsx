@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './list.css'
+import { FaRegTrashAlt } from "react-icons/fa";
 
 
 
@@ -10,9 +11,16 @@ function List() {
         fetch('http://localhost:3001/client/')
             .then(response => response.json())
             .then(data=> setClients(data))
-    },[])
+    })
 
+    const deleteClient = async (e) => {
+        
+        await fetch("http://localhost:3001/client/"+e, {
+            method: "DELETE",
     
+        })
+        console.log(e)
+    }
    
 
     return (
@@ -24,7 +32,8 @@ function List() {
                             <input type="text" value= {item.name} readOnly/>    
                             <input type="text" value= {item.contact} readOnly/> 
                             <input type="text" value= {item.telephone} readOnly/> 
-                            <button className="del-btn" onClick={()=>{alert("You wanto to delete "+ item.name+" ?")}}>delete</button>
+                            <button className="del-btn" value={item._id} onClick={(e)=>deleteClient(e.target.value)}><FaRegTrashAlt />delete</button>
+                            <hr/>
                         </li>
                 ))}
                

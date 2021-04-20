@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function EditProduct() {
+  const [product, setProduct] = ('')
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -11,6 +12,14 @@ function EditProduct() {
   const [quantity, setQuantity] = useState("");
   const [coast, setCoast] = useState("");
   const [price, setPrice] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3001/product/")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+      console.log(id)
+  },[]);
+
 
   const submit = async (e) => {
     e.preventDefault()

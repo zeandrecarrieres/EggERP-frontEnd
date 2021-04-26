@@ -44,18 +44,25 @@ function AddTransaction() {
       <h1>Transaction</h1>
 
       <form className="transaction-form" onSubmit={submit}>
+      <div className="form-cjt">
+        <label htmlFor="date">Date</label>   
         <input
           type="date"
           name=""
           id=""
           onChange={(e) => SetDate(e.target.value)}
         />
+        </div>
+         <div className="form-cjt">
+        <label htmlFor="type">Type</label>   
         <select onChange={(e) => SetType(e.target.value)}>
         <option value="">-- Select option --</option>
           <option value="Sales">Sales</option>
           <option value="Purchase">Purchase</option>
         </select>
-
+        </div>
+        <div className="form-cjt">
+        <label htmlFor="description">Description</label>    
         <select
           id="options-select"
           placeholder="description"
@@ -68,7 +75,9 @@ function AddTransaction() {
             <option value={option.name}>{option.name}</option>
           ))}
         </select>
-
+        </div>
+        <div className="form-cjt">
+        <label htmlFor="quantity">Quantity</label>    
         <input
           type="text"
           placeholder="Quantity"
@@ -77,6 +86,9 @@ function AddTransaction() {
             SetPrice_total(e.target.value * price);
           }}
         />
+        </div>
+        <div className="form-cjt">
+        <label htmlFor="price">Price</label>   
         <input
           type="text"
           placeholder="Price unitary"
@@ -85,13 +97,16 @@ function AddTransaction() {
             SetPrice_total(quantity * e.target.value);
           }}
         />
-
+  </div>
+  <div className="form-cjt">
+        <label htmlFor="total">Total</label>   
         <input
           type="text"
           placeholder="prix_total"
           value={price_total}
           readOnly
         />
+        </div>
         <button>Add</button>
       </form>
 

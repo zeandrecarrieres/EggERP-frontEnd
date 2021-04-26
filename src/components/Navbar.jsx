@@ -34,7 +34,8 @@ function Navbar() {
 
     return (
         <div className="side-menu">
-             <img className='logo-top' src={Logo} alt=""/>
+            <li><Link to="/"><img className='logo-top' src={Logo} alt=""/></Link></li>
+             
              <div className="menu-container">
              
              {user ? 

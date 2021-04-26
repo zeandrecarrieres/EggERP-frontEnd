@@ -38,6 +38,8 @@ const Login = () => {
     if (content._id) {
       setUser(content);
       setRedirect(true);
+    }else{
+      alert("Invalid Login, try again!")
     }
 
   };

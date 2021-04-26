@@ -13,3 +13,15 @@
   .transactions-list {
       width: 100%;
   }
+
+  .form-cjt {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      
+  }
+
+  .form-cjt label {
+      margin-left: 1.5rem;
+      color: #f59709;
+  }

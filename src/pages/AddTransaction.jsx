@@ -51,6 +51,7 @@ function AddTransaction() {
           onChange={(e) => SetDate(e.target.value)}
         />
         <select onChange={(e) => SetType(e.target.value)}>
+        <option value="">-- Select option --</option>
           <option value="Sales">Sales</option>
           <option value="Purchase">Purchase</option>
         </select>
@@ -60,7 +61,9 @@ function AddTransaction() {
           placeholder="description"
           // onClick={(e) => getProducts(e)}
           onChange={(e) => SetProduct(e.target.value)}
+          
         >
+          <option value="">-- Select option --</option>
           {options.map((option) => (
             <option value={option.name}>{option.name}</option>
           ))}

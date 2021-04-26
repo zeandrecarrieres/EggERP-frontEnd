@@ -71,7 +71,7 @@ function AddTransaction() {
 
         <input
           type="text"
-          placeholder="uantity"
+          placeholder="Quantity"
           onChange={(e) => {
             SetQuantity(e.target.value);
             SetPrice_total(e.target.value * price);

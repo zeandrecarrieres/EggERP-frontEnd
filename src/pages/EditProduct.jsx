@@ -136,7 +136,7 @@ function EditProduct() {
             />
           </div>
 
-          <button type="submit">Create Product</button>
+          <button type="submit">Uptade Product</button>
         </form>
       </div>
     </div>

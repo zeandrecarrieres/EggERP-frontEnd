@@ -18,25 +18,11 @@ const User = () => {
         setUser(null);
     }
 
-    
-    // let link;
-
-    // if (!user){
-    //     link = (
-    //         <Link to="/login" className="btn btn-success">Login</Link>
-    //     )
-    // }else{
-    //     link = (
-    //         <button onClick={logout} className="btn btn-danger">Logout</button>
-    //     )
-    // }
-
-
-
     return (
         <div>
             {user ? `You are connected as ${user.username}` : `Log-in to discover new stuff`}
-            {link}
+            console.log('esta conectado')
+            {/* {link} */}
         </div>
     )
 }

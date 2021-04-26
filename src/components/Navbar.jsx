@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 import './navbar.css'
 import Logo from "../assets/logo.png"
@@ -52,20 +52,15 @@ function Navbar() {
                 <h3>PRODUCT</h3>
                 <li><Link to="/prod_register" className="menu-item"><img src={ProductsIcon} alt=""/>Add Product</Link></li>
                 <li><Link to="/prod_list" className="menu-item"><img src={ProductsIcon} alt=""/>List Products</Link></li>
-                {/* { !user ? 
-                <>
-                <h3>USER</h3>
-                <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li>
-                </>
-                :
-                <>
-                </>
-                } */}
-                <h3>USER</h3>
-                <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li>
+              
             </ul>
-            :''}
+            :'' }
+            {user ? "" : <Redirect to="/" />}
             { user ? <button onClick={logout} className="sign-out">SIGN-OUT</button> : ''}
+            
+            {user ? "":
+             <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li> 
+        }
              </div>
            
         </div>

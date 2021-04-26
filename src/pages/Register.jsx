@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 import "./register.css";
 
 function Register() {
@@ -11,6 +12,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [contact, setContact] = useState("");
+  const [create, setCreate] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -29,7 +31,12 @@ function Register() {
         contact,
       }),
     });
+    setCreate(true)
   };
+  if(create){
+    return <Redirect to="/list" />;
+  }
+
   return (
     <div className="add-client">
       <h1>Add new client</h1>

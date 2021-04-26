@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 
 function Register() {
   const [id, setId] = useState("");
@@ -11,6 +12,7 @@ function Register() {
   const [quantity, setQuantity] = useState("");
   const [coast, setCoast] = useState("");
   const [price, setPrice] = useState("");
+  const [create, setCreate] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault()
@@ -29,7 +31,11 @@ function Register() {
         price,
       }),
     });
+    setCreate(true);
   };
+  if(create){
+    return <Redirect to="/prod_list" />;
+  }
   return (
     <div className="add-product">
       <h1>Add new product</h1>

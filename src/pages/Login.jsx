@@ -32,6 +32,7 @@ const Login = () => {
     });
 
     const content = await response.json();
+    if(content)
     console.log(content)
 
     if (content._id) {

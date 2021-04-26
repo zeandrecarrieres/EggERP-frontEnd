@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Redirect } from 'react-router-dom';
-import './list.css'
+// import './list.css'
+import './listProducts.css'
 import { FaRegTrashAlt } from "react-icons/fa";
 
 

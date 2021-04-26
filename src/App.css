@@ -82,6 +82,8 @@ button:hover {
   padding: .3rem .7rem;
   font-size: 0.8rem;
   background: #ffda09;
+  border-radius: 1rem;
+  color: white;
   
 }
 
@@ -106,102 +108,9 @@ h1 {
   background: #F5F5F5;
 }
 
-/* +++++++++++ CSS LIST PRODUCTS ++++++++++++ */
-
-.list-products {
-  height: 91vh;
-  display: flex;
-  flex: 1;
-  justify-content:center;
-  margin-top: 3rem ;
-  flex-direction:column;
-  align-items:center;
-  background: #F5F5F5;
-}
-
-/* +++++++++++ CSS ADD CLIENT ++++++++++++ */
-
-.add-client {
-  height: 91vh;
-  display: flex;
-  flex: 1;
-  justify-content:center;
-  margin-top: 3rem ;
-  flex-direction:column;
-  align-items:center;
-  background: #F5F5F5;
-}
-
-/* +++++++++++ CSS LIST PRODUCTS ++++++++++++ */
-
-.list-clients {
-  height: 91vh;
-  display: flex;
-  flex: 1;
-  justify-content:center;
-  margin-top: 3rem ;
-  flex-direction:column;
-  align-items:center;
-  background: #F5F5F5;
-}
-
-
-/* +++++++++++ CSS ADD PRODUCT ++++++++++++ */
-
-.add-product{
-  height: 91vh;
-  display: flex;
-  flex: 1;
-  justify-content:center;
-  margin-top: 3rem ;
-  flex-direction:column;
-  align-items:center;
-  background: #F5F5F5;
-}
-
-
-.transaction-item {
-  display: flex;
-  flex: 1;
-  margin: 0 1rem;
-}
-
-.champ {
-  background: white;
-  width: 10rem;
-  margin: 2px;
-  padding: .5rem 1rem;
-
-}
 
 hr {
   border: 1px solid rgba(177, 177, 177, 0.226);
   margin: 1rem 0;
 }
 
-@media only screen and (max-width: 600px){
-	.App {
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    font-size: .8rem;
-  } 
-
-  .side-menu {
-    display: flex;
-    width: 100%;
-    width: 100vw;
-    margin: 0;
-  }
-
-  .menu-container {
-    width: 100%;
-    width: 100vw;
-  }
-
-  .side-menu ul  {
-    display: flex;
-    width: 100%;
-  
-}
-}

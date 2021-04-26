@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Transactions from "./Transactions";
 import './addTransactions.css'
+import { format } from 'date-fns'
 
 function AddTransaction() {
   const [date, SetDate] = useState("");
@@ -51,6 +52,7 @@ function AddTransaction() {
           name=""
           id=""
           onChange={(e) => SetDate(e.target.value)}
+          
         />
         </div>
          <div className="form-cjt">

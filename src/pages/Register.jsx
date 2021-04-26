@@ -43,10 +43,12 @@ function Register() {
       <div className="form-group">
         <form onSubmit={submit}>
           <div className="form-line">
+            <label htmlFor="type">Type</label>
             <select className="select-field" onChange={(e) => setType(e.target.value)}>
               <option value="business">Bussiness</option>
               <option value="personal">Personal</option>
             </select>
+            <label htmlFor="contact">Contact</label>
             <input
               type="text"
               placeholder="contact"
@@ -55,11 +57,13 @@ function Register() {
           </div>
 
           <div className="form-line">
+          <label htmlFor="reg_number">Register Number</label>
             <input
               type="text"
               placeholder="register_number"
               onChange={(e) => setRegister_number(e.target.value)}
             />
+             <label htmlFor="name">Name</label>
             <input
               type="text"
               placeholder="name"
@@ -68,6 +72,7 @@ function Register() {
           </div>
 
           <div className="form-line">
+          <label htmlFor="address">Address</label>
             <input
               type="text"
               placeholder="address"
@@ -76,11 +81,13 @@ function Register() {
           </div>
 
           <div className="form-line">
+          <label htmlFor="email">Email</label> 
             <input
               type="text"
               placeholder="email"
               onChange={(e) => setEmail(e.target.value)}
             />
+             <label htmlFor="website">Website</label>
             <input
               type="text"
               placeholder="website"
@@ -89,11 +96,13 @@ function Register() {
           </div>
 
           <div className="form-line">
+          <label htmlFor="telephone">Telephone</label>
             <input
               type="text"
               placeholder="telephone"
               onChange={(e) => setTelephone(e.target.value)}
             />
+             <label htmlFor="mobile">Mobile</label>
             <input
               type="text"
               placeholder="mobile"

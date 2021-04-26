@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router";
+import './registerProduct.css'
 
 function Register() {
   const [id, setId] = useState("");

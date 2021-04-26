@@ -36,10 +36,15 @@ function Navbar() {
         <div className="side-menu">
              <img className='logo-top' src={Logo} alt=""/>
              <div className="menu-container">
+             
+             {user ? 
              <ul>
-                
+               
+
                 <li><Link to="/" className="menu-item"><img src={HomeIcon} alt=""/> Home</Link></li>
+                
                 <h3>TRANSACTION</h3>
+
                 <li><Link to="/transaction" className="menu-item"><img src={TransactionsIcon} alt=""/>Add Transaction</Link></li>
                 <h3>CLIENT</h3>
                 <li><Link to="/register" className="menu-item"><img src={ClientsIcon} alt=""/>Add Client</Link></li>
@@ -59,6 +64,7 @@ function Navbar() {
                 <h3>USER</h3>
                 <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li>
             </ul>
+            :''}
             { user ? <button onClick={logout} className="sign-out">SIGN-OUT</button> : ''}
              </div>
            

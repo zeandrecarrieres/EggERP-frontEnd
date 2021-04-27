@@ -76,3 +76,46 @@
   margin-right: 1rem;
   padding-left: 2rem;
 }
+
+@media only screen and (max-width: 1290px){
+  .logo-top{
+    margin: 1rem 0;
+  }
+  
+  .side-menu{
+    margin: 2rem 0 0 2rem;
+  }
+
+  .side-menu ul {
+    width: 100%;
+  }
+
+  .menu-container img{
+    padding-left: 1rem;
+  }
+
+  .sign-out{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .side-menu{
+    margin: 0rem;
+    border-radius: initial;
+  }
+
+  .menu-item{
+    padding: 0.5rem 0rem;
+  }
+
+  .menu-container img{
+    padding-left:0.5rem;
+    margin-right: 0.3rem;
+  }
+
+  .sign-out{
+    width: 90%;
+  }
+
+}

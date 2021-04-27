@@ -29,3 +29,21 @@
     align-items:center;
     background: #F5F5F5;
   }
+
+  @media only screen and (max-width: 1300px){
+    .add-client{
+      margin-top: 2rem;
+    }
+  
+  }
+
+  @media only screen and (max-width: 900px){
+    .add-client{
+    height: 100vh;
+    margin-top: 0rem;
+    justify-content: flex-start;
+    }
+
+
+
+}

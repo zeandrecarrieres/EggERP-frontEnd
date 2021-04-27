@@ -8,3 +8,33 @@
     align-items:center;
     background: #F5F5F5;
   }
+
+  .fa {
+    color: rgb(236, 139, 12);
+  }
+
+  .fad {
+    background: none;
+    color: rgb(255, 0, 0);
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (max-width: 1300px){
+    .list-container {
+      padding:0;
+    }
+  
+    .list-products{
+      margin-top: 2rem;
+    }
+  
+  }
+
+  @media only screen and (max-width: 900px){
+    .list-products{
+    height: 100vh;
+    margin-top: 0rem;
+    justify-content: flex-start;
+    }
+  
+  }

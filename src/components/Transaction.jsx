@@ -8,12 +8,13 @@ function Transaction({transaction}) {
 
     return (
         <div className="transaction-item">
-            <div className="champ">{transaction.date}{console.log(transaction.date)}</div>
-            <div className="champ">{transaction.type}</div>
-            <div className="champ">{transaction.product}</div>
-            <div className="champ">{transaction.quantity}</div>
-            <div className="champ">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'EUR'}).format(transaction.price)} </div> 
-            <div className="champ"> {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'EUR'}).format(transaction.price_total)} </div>    
+            <li className="champ-date">{(transaction.date)}</li>
+            
+            <li className="champ-type">{transaction.type == 'Sales' ? "S" : "P"}</li>
+            <li className="champ-product">{transaction.product}</li>
+            <li className="champ-quantity">{transaction.quantity}</li>
+            <li className="champ-price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'EUR'}).format(transaction.price)} </li> 
+            <li className="champ-price-total"> {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'EUR'}).format(transaction.price_total)} </li>    
         </div>
      )
 }

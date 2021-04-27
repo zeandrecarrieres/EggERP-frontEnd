@@ -5,9 +5,44 @@
     margin: 0 1rem;
   }
   
-  .champ {
+  .champ-date {
+    background: white;
+    width: 3rem;
+    margin: 2px;
+    padding: .5rem 1rem;
+  
+  }
+  .champ-type {
+    background: white;
+    width: 1rem;
+    margin: 2px;
+    padding: .5rem 1rem;
+  
+  }
+  .champ-product {
     background: white;
     width: 10rem;
+    margin: 2px;
+    padding: .5rem 1rem;
+  
+  }
+  .champ-quantity {
+    background: white;
+    width: 1rem;
+    margin: 2px;
+    padding: .5rem 1rem;
+  
+  }
+  .champ-price {
+    background: white;
+    width: 2rem;
+    margin: 2px;
+    padding: .5rem 1rem;
+  
+  }
+  .champ-price-total {
+    background: white;
+    width: 4rem;
     margin: 2px;
     padding: .5rem 1rem;
   

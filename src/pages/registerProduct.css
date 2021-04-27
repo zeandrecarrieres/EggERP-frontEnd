@@ -9,3 +9,18 @@
     background: #F5F5F5;
   }
   
+  @media only screen and (max-width: 1300px){
+    .add-product{
+      margin-top: 2rem;
+    }
+  
+  }
+
+  @media only screen and (max-width: 900px){
+    .add-product{
+    height: 100vh;
+    margin-top: 0rem;
+    justify-content: flex-start;
+    }
+  
+  }

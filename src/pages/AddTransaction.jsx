@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Transactions from "./Transactions";
 import './addTransactions.css'
-import { format } from 'date-fns'
+
 
 function AddTransaction() {
   const [date, SetDate] = useState("");
@@ -45,6 +45,7 @@ function AddTransaction() {
       <h1>Transaction</h1>
 
       <form className="transaction-form" onSubmit={submit}>
+      <div className="form-cjt-group">
       <div className="form-cjt">
         <label htmlFor="date">Date</label>   
         <input
@@ -78,11 +79,14 @@ function AddTransaction() {
           ))}
         </select>
         </div>
+        </div>
+        <div className="form-cjt-group">
         <div className="form-cjt">
-        <label htmlFor="quantity">Quantity</label>    
+        <label htmlFor="quantity" >Qty</label>    
         <input
           type="text"
           placeholder="Quantity"
+          className="add-quantity"
           onChange={(e) => {
             SetQuantity(e.target.value);
             SetPrice_total(e.target.value * price);
@@ -109,10 +113,12 @@ function AddTransaction() {
           readOnly
         />
         </div>
+        
         <button>Add</button>
+        </div>
       </form>
 
-      <h1>Last Transaction</h1>
+      <h4>LAST TRANSACTIONS</h4>
       <Transactions addCount={addCount} />
     </div>
   );

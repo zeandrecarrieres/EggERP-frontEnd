@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import './list.css'
 import './listProducts.css'
 import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
@@ -47,9 +47,9 @@ const editProduct =  (e) => {
                         <input type="text" value= {product.description} readOnly/> 
                         <input type="text" value= {product.unit} readOnly/> 
                         <input type="text" value= {product.name}  readOnly/>  
+                        <Link to={`/prod_edit/${product._id}`} className="fa"><FaEdit /></Link>
                         <button className="fad" value={product._id} onClick={(e) =>deleteProduct(e.target.value)}><FaRegTrashAlt /></button>   
                      
-                        <Link to={`/prod_edit/${product._id}`} className="fa"><FaEdit /></Link>
                           
 
                     </li>

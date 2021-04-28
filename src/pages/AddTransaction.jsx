@@ -14,7 +14,7 @@ function AddTransaction() {
 
   const [options, SetOptions] = useState([]);
 
-  const selectField = document.querySelector("#options-select");
+  // const selectField = document.querySelector("#options-select");
 
   const submit = async (e) => {
     e.preventDefault();
@@ -59,8 +59,8 @@ function AddTransaction() {
          <div className="form-cjt">
         <label htmlFor="type">Type</label>   
         <select onChange={(e) => SetType(e.target.value)}>
-        <option value="">-- Select option --</option>
-          <option value="Sales">Sales</option>
+        <option  value="">-- Select option --</option>
+          <option  value="Sales">Sales</option>
           <option value="Purchase">Purchase</option>
         </select>
         </div>

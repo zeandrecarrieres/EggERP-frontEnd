@@ -10,14 +10,17 @@
     
   }
 
+  .option {
+   border-radius: 1rem;
+  }
+
   .transactions-list {
       width: 100%;
   }
 
   .transaction-form {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       
   }
 
@@ -49,6 +52,12 @@
   }
 
   @media only screen and (max-width: 1300px){
+
+    .transaction-form {
+      flex-direction: column;
+      align-items: flex-end;
+      
+  }
     .add-transactions{
       margin-top: 2rem;
     }

@@ -34,7 +34,7 @@ input, select, button {
   padding: .5rem 1rem;
   font-size: 0.8rem;
   margin: 3px;
-  border-radius: 1rem;
+  border-radius: 8px;
   border: 0;
   background: #ffffff;
   color: #959595;

@@ -12,8 +12,8 @@ function RegisterUser() {
 
   const submit = async (e) => {
     e.preventDefault();
-    // await fetch("https://eggerp-backend.herokuapp.com/", {
-    await fetch("http://localhost:3001/user", {
+    await fetch("https://eggerp-backend.herokuapp.com/", {
+    // await fetch("http://localhost:3001/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

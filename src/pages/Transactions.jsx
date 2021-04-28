@@ -15,7 +15,7 @@ function Transactions({addCount}) {
 
 
   useEffect(() => {
-    fetch("http://https://eggerp-backend.herokuapp.com/")
+    fetch("https://eggerp-backend.herokuapp.com/")
       .then((response) => response.json())
       .then((data) => setTransactions(data));
   },[addCount]);

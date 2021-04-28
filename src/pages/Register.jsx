@@ -16,8 +16,8 @@ function Register() {
 
   const submit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3001/client", {
-      // await fetch("http://localhost:3001/client", {
+    // await fetch("http://localhost:3001/client", {
+      await fetch("http://localhost:3001/client", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

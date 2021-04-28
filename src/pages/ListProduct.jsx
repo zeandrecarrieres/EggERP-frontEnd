@@ -43,10 +43,10 @@ const deleteProduct = async (e) => {
             <ul className="list-container">
                 {products.map((product)=>(
                     <li key={product._id}>
-                        <input type="text" value= {product.name} readOnly/>    
-                        <input type="text" value= {product.description} readOnly/> 
-                        <input type="text" value= {product.unit} readOnly/> 
-                        <input type="text" value= {product.name}  readOnly/>  
+                        <input className="product-name" type="text" value= {product.name} readOnly/>    
+                        <input className="product-description" type="text" value= {product.description} readOnly/> 
+                        <input className="product-unit"type="text" value= {product.unit} readOnly/> 
+                        <input className="product-price" type="text" value= {product.price}  readOnly/>  
                         <Link to={`/prod_edit/${product._id}`} className="fa"><FaEdit /></Link>
                         <button className="fad" value={product._id} onClick={(e) =>deleteProduct(e.target.value)}><FaRegTrashAlt /></button>   
                      

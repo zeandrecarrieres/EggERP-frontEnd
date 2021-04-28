@@ -33,6 +33,36 @@ function Navbar() {
 
 
     return (
+        <>
+        <div className="mobile-menu">
+            
+            <div className="menu-header">
+            {user ? 
+             <ul>
+               
+
+                <li><Link to="/" className="burguer-menu-item"><img src={HomeIcon} alt=""/></Link></li>
+                
+                
+
+                <li><Link to="/transaction" className="burguer-menu-item"><img src={TransactionsIcon} alt=""/></Link></li>
+                
+                <li><Link to="/register" className="burguer-menu-item"><img src={ClientsIcon} alt=""/></Link></li>
+                <li><Link to="/list" className="burguer-menu-item"><img src={ClientsIcon} alt=""/></Link></li>
+                
+                <li><Link to="/prod_register" className="burguer-menu-item"><img src={ProductsIcon} alt=""/></Link></li>
+                <li><Link to="/prod_list" className="burguer-menu-item"><img src={ProductsIcon} alt=""/></Link></li>
+              
+            </ul>
+            :'' }
+            {user ? "" : <Redirect to="/" />}
+            { user ? <button onClick={logout} className="sign-out">SIGN-OUT</button> : ''}
+            
+            {user ? "":
+             <li><Link to="/user_register" className="menu-item"><img src={UsersIcon} alt=""/>Add User</Link></li> 
+        }
+             </div>
+        </div>
         <div className="side-menu">
             <li><Link to="/"><img className='logo-top' src={Logo} alt=""/></Link></li>
              
@@ -65,6 +95,7 @@ function Navbar() {
              </div>
            
         </div>
+        </>
     )
 }
 

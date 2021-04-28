@@ -44,35 +44,48 @@ function Register() {
       <div className="form-group">
         <form onSubmit={submit}>
           <div className="form-line">
+            <div className="form-cjt">
             <label htmlFor="type">Type</label>
             <select className="select-field" onChange={(e) => setType(e.target.value)}>
               <option value="business">Bussiness</option>
               <option value="personal">Personal</option>
             </select>
+            </div>
+           
+            <div className="form-cjt">
             <label htmlFor="contact">Contact</label>
             <input
               type="text"
               placeholder="contact"
               onChange={(e) => setContact(e.target.value)}
             />
+            </div>
+           
           </div>
 
           <div className="form-line">
+          <div className="form-cjt">
           <label htmlFor="reg_number">Register Number</label>
             <input
               type="text"
               placeholder="register_number"
               onChange={(e) => setRegister_number(e.target.value)}
             />
-             <label htmlFor="name">Name</label>
+            </div>
+         
+            <div className="form-cjt">
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               placeholder="name"
               onChange={(e) => setName(e.target.value)}
             />
+            </div>
+          
           </div>
 
           <div className="form-line">
+          <div className="form-cjt">
           <label htmlFor="address">Address</label>
             <input
               type="text"
@@ -80,35 +93,47 @@ function Register() {
               onChange={(e) => setAddress(e.target.value)}
             />
           </div>
+       
+          </div>
 
           <div className="form-line">
+          <div className="form-cjt">
           <label htmlFor="email">Email</label> 
             <input
               type="text"
               placeholder="email"
               onChange={(e) => setEmail(e.target.value)}
             />
-             <label htmlFor="website">Website</label>
+          </div>
+          <div className="form-cjt">
+          <label htmlFor="website">Website</label>
             <input
               type="text"
               placeholder="website"
               onChange={(e) => setWebsite(e.target.value)}
             />
           </div>
+            
+          </div>
 
           <div className="form-line">
+          <div className="form-cjt">
           <label htmlFor="telephone">Telephone</label>
             <input
               type="text"
               placeholder="telephone"
               onChange={(e) => setTelephone(e.target.value)}
             />
-             <label htmlFor="mobile">Mobile</label>
+          </div>
+          <div className="form-cjt">
+          <label htmlFor="mobile">Mobile</label>
             <input
               type="text"
               placeholder="mobile"
               onChange={(e) => setMobile(e.target.value)}
             />
+          </div>
+          
           </div>
 
           <button type="submit">Create Client</button>

@@ -37,3 +37,26 @@
     }
   
   }
+
+  @media only screen and (max-width: 415px){
+    .list-products{
+      flex: initial;
+    }
+
+    .product-description{
+      display: none;
+    }
+
+    .product-unit{
+      max-width: 1rem;
+    }
+
+    .product-price{
+      max-width: 1rem;
+    }
+
+    .fad{
+      display: none;
+    }
+
+  }

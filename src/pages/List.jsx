@@ -32,9 +32,9 @@ function List() {
                 {clients.map((item)=>(
                         <li key={item._id}>
                             <input type="text" value= {item.name} readOnly/>    
-                            <input type="text" value= {item.contact} readOnly/> 
-                            <input type="text" value= {item.telephone} readOnly/> 
-                            <button className="del-btn" value={item._id} onClick={(e)=>deleteClient(e.target.value)}><FaRegTrashAlt />delete</button>
+                            <input className="client-contact" type="text" value= {item.contact} readOnly/> 
+                            <input className="client-telephone"type="text" value= {item.telephone} readOnly/> 
+                            <button className="del-btn" value={item._id} onClick={(e)=>deleteClient(e.target.value)}><FaRegTrashAlt /></button>
                             <hr/>
                         </li>
                 ))}

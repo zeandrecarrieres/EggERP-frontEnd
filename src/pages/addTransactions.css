@@ -10,10 +10,7 @@
     
   }
 
-  .option {
-   border-radius: 1rem;
-  }
-
+  
   .transactions-list {
       width: 100%;
   }
@@ -72,3 +69,21 @@
     }
   
   }
+
+@media only screen and (max-width: 415px){
+  .add-transactions {
+    flex: initial;
+  }
+
+  .form-cjt-group{
+    flex-direction: column;
+  }
+  .form-cjt{
+    width:100%;
+    
+  }
+
+  .transaction-item li{
+    overflow: hidden;
+  }
+}

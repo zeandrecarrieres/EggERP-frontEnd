@@ -4,6 +4,11 @@
 
 }
 
+.mobile-menu{
+  display: none;
+} 
+
+
 .side-menu {
   /* height: 90.5vh; */
   margin: 3rem 0 0 3rem;
@@ -78,6 +83,11 @@
 }
 
 @media only screen and (max-width: 1290px){
+   .mobile-menu{
+    display: none;
+  } 
+
+
   .logo-top{
     margin: 1rem 0;
   }
@@ -100,6 +110,11 @@
 }
 
 @media only screen and (max-width: 900px){
+  .mobile-menu{
+    display: none;
+  } 
+
+
   .side-menu{
     margin: 0rem;
     border-radius: initial;
@@ -110,6 +125,7 @@
   }
 
   .menu-container img{
+   
     padding-left:0.5rem;
     margin-right: 0.3rem;
   }
@@ -117,5 +133,82 @@
   .sign-out{
     width: 90%;
   }
+
+}
+
+@media only screen and (max-width: 699px){
+  .mobile-menu{
+    display: none;
+  } 
+
+  .logo-top {
+    width: 70%;
+  }
+  
+  .side-menu{
+    margin: 0rem;
+    border-radius: initial;
+  }
+
+  .menu-item{
+    padding: 0.5rem 0rem;
+    text-align: left;
+  }
+
+  .menu-item:hover{
+    border: none;
+    border-radius:initial;
+  }
+
+  .menu-container h3 {
+    text-align: left;
+  }
+
+  .menu-container img{
+    display: none;
+  }
+
+  .menu-container img{
+    padding-left:0.5rem;
+    margin-right: 0.3rem;
+  }
+
+  .sign-out{
+    width: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 415px){
+.App {
+  flex-direction: column;
+}
+.side-menu {
+  display: none;
+}
+
+.mobile-menu{
+  display: flex;
+  background:red;
+  height:15vh;
+}
+
+.menu-header {
+  width:100%;
+ 
+  
+}
+
+.menu-header ul {
+  display: flex;
+  justify-content:space-around;
+ padding: 0;
+}
+
+
+.burguer-menu-item {
+
+  color: white;
+}
 
 }

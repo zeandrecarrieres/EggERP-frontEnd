@@ -42,7 +42,7 @@ function App() {
       <div className="App">
         <BrowserRouter>
         <UserContext.Provider value={value}>
-          <div className="menu"></div>
+          {/* <div className="menu"></div> */}
 
           <Navbar />
           <Switch>

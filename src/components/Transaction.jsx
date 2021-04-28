@@ -10,7 +10,7 @@ function Transaction({transaction}) {
         <div className="transaction-item">
             <li className="champ-date">{(transaction.date)}</li>
             
-            <li className="champ-type">{transaction.type == 'Sales' ? "S" : "P"}</li>
+            <li className="champ-type">{transaction.type === 'Sales' ? "S" : "P"}</li>
             <li className="champ-product">{transaction.product}</li>
             <li className="champ-quantity">{transaction.quantity}</li>
             <li className="champ-price">{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'EUR'}).format(transaction.price)} </li> 

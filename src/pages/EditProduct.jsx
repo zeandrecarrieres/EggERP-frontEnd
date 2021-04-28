@@ -16,7 +16,7 @@ function EditProduct() {
   const [edit, setEdit] = useState(false);
 
   const product_id = useParams(id)
-  console.log(product_id);
+  // console.log(product_id);
 
   useEffect(() => {
     fetch(`http://localhost:3001/product/${product_id.id}`)

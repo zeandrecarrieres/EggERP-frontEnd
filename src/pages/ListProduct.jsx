@@ -8,7 +8,7 @@ import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
 
 function ListProduct() {
     const [products, setProducts] = useState([]);
-    const [id, setId] = useState("");
+    // const [id, setId] = useState("");
     const [count, setCount] = useState(0);
 
     useEffect(()=>{
@@ -25,13 +25,13 @@ const deleteProduct = async (e) => {
     setCount(count+1);
 }
 
-const editProduct =  (e) => {
-    console.log(e)
-    setId(e)
-    console.log(id)
-    return
-    // <Redirect  to="/prod_edit" id={id} />
-}
+// const editProduct =  (e) => {
+//     console.log(e)
+//     setId(e)
+//     console.log(id)
+//     return
+//     // <Redirect  to="/prod_edit" id={id} />
+// }
 
 
   

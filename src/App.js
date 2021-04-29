@@ -24,6 +24,7 @@ function App() {
             // const response = await fetch('http://localhost:3001/user', {
                 headers: {'Content-Type': 'application/json'},
                 credentials: 'include',
+                mode: 'cors',
             })
 
             const content = await response.json();

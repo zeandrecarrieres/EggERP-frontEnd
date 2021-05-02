@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from "react-router-dom";
 import "./register.css";
 
 function RegisterUser() {
@@ -8,27 +8,26 @@ function RegisterUser() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [redirect,setRedirect] = useState(false);
+  const [redirect, setRedirect] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
     await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
-    // await fetch("http://localhost:3001/user", {
+      // await fetch("http://localhost:3001/user", {
       method: "POST",
+      mode: 'cors',
+      secure : true,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         type,
         register_number,
         name,
         email,
-        password
+        password,
       }),
     });
 
-  
-      return <Redirect to="/" />;
-  
-
+    return <Redirect to="/" />;
   };
   return (
     <div className="add-client">
@@ -40,7 +39,9 @@ function RegisterUser() {
               className="select-field"
               value={type}
               onChange={(e) => setType(e.target.value)}
-            > <option value="Admin">...</option>
+            >
+              {" "}
+              <option value="Admin">...</option>
               <option value="Admin">Administrator</option>
               <option value="User">User</option>
             </select>
@@ -53,11 +54,11 @@ function RegisterUser() {
           </div>
 
           <div className="form-line">
-           
             <input
               type="text"
               placeholder="name"
-              required value={name}
+              required
+              value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -66,13 +67,15 @@ function RegisterUser() {
             <input
               type="text"
               placeholder="email"
-              required value={email}
+              required
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="password"
-              required value={password}
+              required
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>

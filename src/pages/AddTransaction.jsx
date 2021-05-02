@@ -19,7 +19,7 @@ function AddTransaction() {
   const submit = async (e) => {
     e.preventDefault();
     
-    await fetch("http://https://nutriovosapp-backend.herokuapp.com/transaction", {
+    await fetch("https://nutriovosapp-backend.herokuapp.com/transaction", {
       // wait fetch("https://nutriovosapp-backend.herokuapp.com/transaction", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

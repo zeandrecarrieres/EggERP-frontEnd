@@ -31,7 +31,7 @@ const Login = () => {
     const response = await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
       // const response = await fetch("http://localhost:3001/user", {
 
-      // headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       credentials: "include",
       mode: 'cors',
     });

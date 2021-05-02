@@ -37,8 +37,8 @@ function AddTransaction() {
 
   useEffect(() => {
   
-    fetch("http://localhost:3001/product/")
-    // fetch("https://nutriovosapp-backend.herokuapp.com/product/")
+    // fetch("http://localhost:3001/product/")
+    fetch("https://nutriovosapp-backend.herokuapp.com/product/")
       .then((response) => response.json())
       .then((data) => SetOptions(data))
       .catch((error) => console.log(error));

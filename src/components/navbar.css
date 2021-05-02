@@ -11,7 +11,7 @@
 
 .side-menu {
   /* height: 90.5vh; */
-  margin: 3rem 0 0 3rem;
+  margin: 2rem 0 0 3rem;
   background: #f59709;
   width: 15%;
   padding: 0.1rem 1rem;
@@ -82,11 +82,10 @@
   padding-left: 2rem;
 }
 
-@media only screen and (max-width: 1290px){
+@media only screen and (max-width: 1705px){
    .mobile-menu{
     display: none;
   } 
-
 
   .logo-top{
     margin: 1rem 0;
@@ -107,6 +106,10 @@
   .sign-out{
     width: 60%;
   }
+}
+
+@media only screen and (max-width: 1399px){
+
 }
 
 @media only screen and (max-width: 900px){
@@ -189,7 +192,7 @@
 
 .mobile-menu{
   display: flex;
-  background:red;
+  background:#e69200;
   height:15vh;
 }
 
@@ -210,5 +213,10 @@
 
   color: white;
 }
+
+.transactions-list{
+  width: 100vw;
+}
+
 
 }

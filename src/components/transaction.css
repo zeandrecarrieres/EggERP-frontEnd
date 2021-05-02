@@ -52,7 +52,14 @@
   
   }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1390px){
+  .transaction-form{
+    flex-wrap: wrap;
+  }
+}
+
+
+@media only screen and (max-width: 1290px){
   
 .transaction-item {
   font-size:0.8rem;
@@ -66,6 +73,7 @@
   width: 3rem;
   margin: 2px;
   padding: .5rem 1rem;
+  overflow: hidden;
 
 }
 .champ-type {
@@ -123,6 +131,7 @@
     width: 1.5rem;
     margin: 2px;
     padding: .5rem 1rem;
+    overflow: hidden;
   
   }
   .champ-type {

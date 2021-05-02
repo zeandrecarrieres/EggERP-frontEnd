@@ -20,8 +20,8 @@ function EditProduct() {
 
   useEffect(() => {
     
-    fetch(`http://localhost:3001/product/${product_id.id}`)
-    // fetch(`https://nutriovosapp-backend.herokuapp.com/product/${product_id.id}`)
+    // fetch(`http://localhost:3001/product/${product_id.id}`)
+    fetch(`https://nutriovosapp-backend.herokuapp.com/product/${product_id.id}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data)

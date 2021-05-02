@@ -9,11 +9,12 @@ function RegisterUser() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
+  const [create, setCreate] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
-    // await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
-      await fetch("http://localhost:3001/user", {
+    await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
+      // await fetch("http://localhost:3001/user", {
       method: "POST",
       mode: 'cors',
       secure : true,
@@ -26,9 +27,14 @@ function RegisterUser() {
         password,
       }),
     });
-
-    return <Redirect to="/" />;
+    setCreate(true);
+    alert('user created!')
   };
+    if(create){
+      return <Redirect to="/" />;
+    }
+    
+ 
   return (
     <div className="add-client">
       <h1>Add new User</h1>

@@ -9,6 +9,7 @@ function List() {
     const [count, setCount] = useState(0);
 
     useEffect(()=>{
+        // fetch('http://localhost:3001/client/')
         fetch('https://nutriovosapp-backend.herokuapp.com/client/')
             .then(response => response.json())
             .then(data=> setClients(data))
@@ -16,8 +17,8 @@ function List() {
 
     const deleteClient = async (e) => {
         
-        await fetch("http://localhost:3001/client/"+e, {
-        // await fetch("https://nutriovosapp-backend.herokuapp.com/client/"+e, {
+        // await fetch("http://localhost:3001/client/"+e, {
+        await fetch("https://nutriovosapp-backend.herokuapp.com/client/"+e, {
             method: "DELETE",
     
         })

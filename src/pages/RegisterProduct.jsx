@@ -18,8 +18,8 @@ function Register() {
   const submit = async (e) => {
     e.preventDefault()
    
-    await fetch(" http://localhost:3001/product", {
-      // await fetch("https://nutriovosapp-backend.herokuapp.com/product", {
+    // await fetch(" http://localhost:3001/product", {
+      await fetch("https://nutriovosapp-backend.herokuapp.com/product", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

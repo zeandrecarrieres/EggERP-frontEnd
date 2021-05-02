@@ -18,7 +18,7 @@ function AddTransaction() {
 
   const submit = async (e) => {
     e.preventDefault();
-    await fetch("https://eggerp-backend.herokuapp.com/transaction", {
+    await fetch("https://nutriovosapp-backend.herokuapp.com/transaction", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -34,7 +34,7 @@ function AddTransaction() {
   };
 
   useEffect(() => {
-    fetch("https://eggerp-backend.herokuapp.com/product/")
+    fetch("https://nutriovosapp-backend.herokuapp.com/product/")
       .then((response) => response.json())
       .then((data) => SetOptions(data))
       .catch((error) => console.log(error));

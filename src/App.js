@@ -20,7 +20,7 @@ function App() {
   useEffect(()=>{
     (
         async () => {
-            const response = await fetch('https://eggerp-backend.herokuapp.com/user', {
+            const response = await fetch('https://nutriovosapp-backend.herokuapp.com/user', {
             // const response = await fetch('http://localhost:3001/user', {
                 headers: {'Content-Type': 'application/json'},
                 credentials: 'include',

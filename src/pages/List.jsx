@@ -9,14 +9,14 @@ function List() {
     const [count, setCount] = useState(0);
 
     useEffect(()=>{
-        fetch('https://eggerp-backend.herokuapp.com/client/')
+        fetch('https://nutriovosapp-backend.herokuapp.com/client/')
             .then(response => response.json())
             .then(data=> setClients(data))
     },[count])
 
     const deleteClient = async (e) => {
         
-        await fetch("https://eggerp-backend.herokuapp.com/client/"+e, {
+        await fetch("https://nutriovosapp-backend.herokuapp.com/client/"+e, {
             method: "DELETE",
     
         })

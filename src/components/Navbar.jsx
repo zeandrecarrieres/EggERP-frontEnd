@@ -20,7 +20,7 @@ function Navbar() {
 
     //Logou function
     const logout = async () => {
-        await fetch('https://eggerp-backend.herokuapp.com/user/logout', {
+        await fetch('https://nutriovosapp-backend.herokuapp.com/user/logout', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             credentials: 'include',

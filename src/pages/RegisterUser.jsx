@@ -12,8 +12,8 @@ function RegisterUser() {
 
   const submit = async (e) => {
     e.preventDefault();
-    await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
-      // await fetch("http://localhost:3001/user", {
+    // await fetch("https://nutriovosapp-backend.herokuapp.com/user", {
+      await fetch("http://localhost:3001/user", {
       method: "POST",
       mode: 'cors',
       secure : true,

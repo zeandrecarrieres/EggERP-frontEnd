@@ -18,7 +18,9 @@ function ListProduct() {
     },[count])
 
 const deleteProduct = async (e) => {
-    await fetch("https://nutriovosapp-backend.herokuapp.com/product/"+e, {
+  
+    await fetch("  http://localhost:3001/product/"+e, {
+        // await fetch("https://nutriovosapp-backend.herokuapp.com/product/"+e, {
         method: "DELETE",
 
     })

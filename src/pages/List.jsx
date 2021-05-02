@@ -16,7 +16,8 @@ function List() {
 
     const deleteClient = async (e) => {
         
-        await fetch("https://nutriovosapp-backend.herokuapp.com/client/"+e, {
+        await fetch("http://localhost:3001/client/"+e, {
+        // await fetch("https://nutriovosapp-backend.herokuapp.com/client/"+e, {
             method: "DELETE",
     
         })

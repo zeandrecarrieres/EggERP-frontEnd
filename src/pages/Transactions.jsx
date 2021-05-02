@@ -13,7 +13,9 @@ function Transactions({ addCount }) {
   // };
 
   useEffect(() => {
-    fetch("https://nutriovosapp-backend.herokuapp.com/transaction/")
+    
+    fetch("http://localhost:3001/transaction/")
+    // fetch("https://nutriovosapp-backend.herokuapp.com/transaction/")
       .then((response) => response.json())
       .then((data) => setTransactions(data));
   }, [addCount]);

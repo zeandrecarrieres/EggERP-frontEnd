@@ -20,7 +20,7 @@ function AddTransaction() {
     e.preventDefault();
     
     //await fetch("http://localhost:3001/transaction", {
-      wait fetch("https://nutriovosapp-backend.herokuapp.com/transaction", {
+      await fetch("https://nutriovosapp-backend.herokuapp.com/transaction", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
